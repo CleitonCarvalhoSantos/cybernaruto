@@ -1,0 +1,158 @@
+/* Define a cor de fundo do body como preto e esconde qualquer conteúdo que ultrapasse os limites da tela */
+body {
+  background-color: #000000;
+  overflow: hidden;
+}
+
+/* Cria um efeito visual com gradiente escuro na lateral esquerda da tela */
+main::after {
+  content: ''; /* conteúdo vazio: necessário para pseudo-elementos */
+  position: fixed; /* fixa o gradiente na tela */
+  top: 0;
+  left: 0;
+  min-height: 100vh; /* cobre 100% da altura da tela */
+  width: 100vh; /* largura igual à altura da tela */
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* gradiente preto que desaparece */
+}
+
+/* Esconde todos os personagens por padrão */
+main .personagem {
+  display: none;
+  height: 100vh; /* ocupa a tela inteira verticalmente */
+}
+
+/* Exibe o personagem selecionado */
+main .personagem.selecionado {
+  display: block;
+}
+
+/* Ajusta a imagem do personagem para cobrir toda a tela */
+main.personagem .imagem {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* faz a imagem preencher o espaço sem distorcer */
+}
+
+
+/* Estiliza o bloco de texto sobre o personagem */
+.conteudo {
+  position: absolute; /* posicionamento livre na tela */
+  top: 0;
+  left: 120px; /* distância da esquerda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente o conteúdo */
+  height: 100%;
+  max-width: 380px; /* largura máxima do bloco */
+  z-index: 1; /* garante que o texto fique acima da imagem */
+}
+
+
+/* Nome dos personagens */
+.nome-personagem {
+  font-size: 48px;
+  font-family: "secular one";
+  font-weight: 400;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #fff;
+  /* Aplica um estilo de texto grande, em negrito, com sombra de texto branca para destacar o nome do personagem. */
+}
+
+/* Cores específicas para cada personagem */
+.nome-personagem.cybermundo { color: #47FFC5; }
+.nome-personagem.cybernaruto { color: #ffa94f; }
+.nome-personagem.cybersasuke { color: #9747ff; }
+.nome-personagem.cyberkakashi { color: #ffffff; }
+.nome-personagem.cybersakura { color: #e4309a; }
+.nome-personagem.cyberhinata { color: royalblue; }
+/* Cada personagem recebe uma cor distinta para o nome, utilizando classes específicas. */
+
+/* Estiliza a descrição do personagem */
+.conteudo .descricao {
+  color: #ffffff;
+  font-family: "rubik"; /* outra fonte importada */
+  font-size: 16px;
+  line-height: 24px; /* altura entre linhas para facilitar a leitura */
+}
+/* Botões (desktop - barra lateral direita) */
+
+.botoes {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 140px;
+  height: 100vh;
+  /* Define uma barra lateral fixa no lado direito da tela, com altura de 100% da viewport. */
+  
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  /* Adiciona um fundo semitransparente e um efeito de desfoque na área de botões. */
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* Organiza os botões verticalmente e os centraliza na barra lateral. */
+  
+  gap: 16px;
+  /* Cria um espaço de 16px entre os botões. */
+  
+  padding: 20px 0;
+  /* Adiciona espaçamento ao redor da área de botões. */
+  
+  z-index: 3;
+  /* Garante que a área de botões ficará acima de outros elementos na tela. */
+}
+
+/* Estilo dos botões */
+.botao {
+  border: none;
+  background-color: transparent;
+  width: 64px;
+  height: 64px;
+  cursor: pointer;
+  /* Define o estilo dos botões, sem borda e com fundo transparente, além de um tamanho fixo e cursor de clique. */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Aplica transições suaves para transformações e sombras dos botões. */
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Os botões são configurados para centralizar o conteúdo dentro deles. */
+  
+  padding: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  /* Os botões têm bordas arredondadas e qualquer conteúdo extra será oculto. */
+}
+
+.botao img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  /* As imagens dentro dos botões preenchem o espaço disponível sem distorção, com o conteúdo ajustado proporcionalmente. */
+  
+  display: block;
+  background: transparent;
+  pointer-events: none;
+  /* Define que a imagem ocupa completamente o espaço do botão e não interfere nas interações do usuário. */
+  
+  image-rendering: auto;
+  /* Ajusta a renderização das imagens para melhorar a qualidade visual. */
+}
+
+/* Destaque visual ao botão ativo */
+.botao.selecionado {
+  transform: scale(1.1);
+  /* Quando o botão é selecionado, ele aumenta de tamanho ligeiramente. */
+}
+
+.botao.cybermundo.selecionado img { filter: drop-shadow(0 0 10px #47FFC5); }
+.botao.cybernaruto.selecionado img { filter: drop-shadow(0 0 10px #ffa94f); }
+.botao.cybersasuke.selecionado img { filter: drop-shadow(0 0 10px #9747ff); }
+.botao.cyberkakashi.selecionado img { filter: drop-shadow(0 0 10px #fff); }
+.botao.cybersakura.selecionado img { filter: drop-shadow(0 0 10px #e4309a); }
+.botao.cyberhinata.selecionado img { filter: drop-shadow(0 0 10px royalblue); }
+/* Para cada botão, um efeito de sombra colorida é aplicado quando o botão é selecionado, destacando o personagem correspondente. */
+

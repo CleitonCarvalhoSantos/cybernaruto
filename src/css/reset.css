@@ -1,0 +1,11 @@
+/* A regra abaixo aplica-se a todos os elementos da página. */
+* {
+  margin: 0; /* Remove a margem padrão aplicada por navegadores a todos os elementos */
+  padding: 0; /* Remove o preenchimento (padding) padrão aplicado por navegadores a todos os elementos */
+  box-sizing: border-box; /* Define que a largura e a altura de um elemento incluem a borda e o preenchimento, evitando que o tamanho do elemento se torne maior do que o especificado */
+}
+
+/* A regra abaixo é específica para listas não ordenadas (ul). */
+ul {
+  list-style: none; /* Remove os marcadores (bolinhas) padrão de uma lista não ordenada */
+}

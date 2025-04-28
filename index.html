@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!-- Define o tipo de documento, indicando que é um documento HTML5 -->
+<html lang="pt-BR"> <!-- Inicia o HTML e define o idioma da página como português do Brasil -->
+
+<head>
+    <!-- Metadados sobre o documento -->
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais e acentuação -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a visualização responsiva para dispositivos móveis -->
+    <title>Naruto Cybermundo</title> <!-- Define o título da página, que aparecerá na aba do navegador -->
+    <meta name="description"
+        content="Explore o universo Naruto Cybermundo: onde a tecnologia domina e os ninjas se tornam cybers. Conheça os personagens e seu papel neste mundo futurista.">
+    <!-- Descrição da página para SEO e redes sociais -->
+
+    <!-- Conexão com fontes externas do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- Precarrega o servidor do Google Fonts para otimizar o carregamento -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Precarrega o servidor do Google Fonts com CORS para otimizar o carregamento -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Secular+One&display=swap"
+        rel="stylesheet"> <!-- Importa as fontes Rubik e Secular One para o estilo da página -->
+
+    <!-- Links para os arquivos de estilo CSS -->
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <!-- Importa o arquivo CSS para resetar as configurações padrão do navegador -->
+    <link rel="stylesheet" href="./src/css/estilos.css">
+    <!-- Importa o arquivo CSS com os estilos principais da página -->
+    <link rel="stylesheet" href="./src/css/responsivo.css">
+    <!-- Importa o arquivo CSS com os estilos responsivos para diferentes dispositivos -->
+</head>
+
+<body>
+    <main class="personagens"> <!-- Define a seção principal da página, que contém os personagens -->
+
+        <!-- Seção de um personagem específico -->
+        <section class="personagem selecionado">
+            <!-- Define uma seção para o personagem Cybermundo, com a classe "selecionado" -->
+            <picture> <!-- Usado para fornecer diferentes imagens dependendo da largura da tela -->
+                <source srcset="./src/imagens/cybermundo.png" media="(min-width: 768px)" />
+                <!-- Define a imagem para telas maiores que 768px -->
+                <img class="imagem" src="./src/imagens/cybermundo-mobile.png" alt="Cybermundo" />
+                <!-- Define a imagem para telas menores que 768px -->
+            </picture>
+            <div class="conteudo"> <!-- Contém o conteúdo textual do personagem -->
+                <h2 class="nome-personagem">Cybermundo</h2> <!-- Nome do personagem -->
+                <p class="descricao"> <!-- Descrição do personagem -->
+                    Cybermundo é um mundo onde a tecnologia domina. Controlado por um sistema de códigos avançados,
+                    criados por cybers-robôs que governam o planeta.
+                </p>
+            </div>
+        </section>
+
+        <!-- Replicação das seções para os outros personagens -->
+        <section class="personagem"> <!-- Seção para o personagem Cybernaruto -->
+            <picture>
+                <source srcset="./src/imagens/cybernaruto.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/imagens/cybernaruto-mobile.png" alt="Cybernaruto" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Cybernaruto</h2>
+                <p class="descricao">
+                    Cybernaruto, o cyber supremo, responsável pela ordem e a paz no Cybermundo. Mestre em programas de
+                    segurança e organização.
+                </p>
+            </div>
+        </section>
+
+        <section class="personagem"> <!-- Seção para o personagem Cybersasuke -->
+            <picture>
+                <source srcset="./src/imagens/cybersasuke.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/imagens/cybersasuke-mobile.png" alt="Cybersasuke" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Cybersasuke</h2>
+                <p class="descricao">
+                    Cybersasuke, tão importante quanto o cyber supremo. Ele é o backend dos programas de segurança — a
+                    parte que ninguém vê, mas todos sabem que está lá.
+                </p>
+            </div>
+        </section>
+
+        <section class="personagem"> <!-- Seção para o personagem Cyberkakashi -->
+            <picture>
+                <source srcset="./src/imagens/cyberkakashi.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/imagens/cyberkakashi-mobile.png" alt="Cyberkakashi" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Cyberkakashi</h2>
+                <p class="descricao">
+                    Cyberkakashi, o cyber com HD infinito. Consegue copiar e armazenar qualquer código já descoberto.
+                    Por isso, é o responsável pela manutenção dos cybers Naruto e Sasuke.
+                </p>
+            </div>
+        </section>
+
+        <section class="personagem"> <!-- Seção para o personagem Cybersakura -->
+            <picture>
+                <source srcset="./src/imagens/cybersakura.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/imagens/cybersakura-mobile.png" alt="Cybersakura" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Cybersakura</h2>
+                <p class="descricao">
+                    Cybersakura, a cyber com o poder da vida e da saúde. Ela cria códigos que dão vida a outros cybers e
+                    também auxilia na saúde dos humanos.
+                </p>
+            </div>
+        </section>
+
+        <section class="personagem"> <!-- Seção para o personagem Cyberhinata -->
+            <picture>
+                <source srcset="./src/imagens/cyberhinata.png" media="(min-width: 768px)" />
+                <img class="imagem" src="./src/imagens/cyberhinata-mobile.png" alt="Cyberhinata" />
+            </picture>
+            <div class="conteudo">
+                <h2 class="nome-personagem">Cyberhinata</h2>
+                <p class="descricao">
+                    Cyberhinata, a cyber do amor e da união. Cria códigos que ajudam humanos e cybers a viverem em
+                    harmonia. Conhecida por ser a conselheira do cyber supremo, ajuda a criar sistemas únicos que
+                    protegem ambos os mundos.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Lista de botões de navegação para os personagens -->
+    <ul class="botoes">
+        <li><button class="botao cybermundo selecionado"><img src="./src/imagens/cybermundo-icon.png"
+                    alt="Ícone Cybermundo"></button></li>
+        <li><button class="botao cybernaruto"><img src="./src/imagens/cybernaruto-icon.png"
+                    alt="Ícone Cybernaruto"></button></li>
+        <li><button class="botao cybersasuke"><img src="./src/imagens/cybersasuke-icon.png"
+                    alt="Ícone Cybersasuke"></button></li>
+        <li><button class="botao cyberkakashi"><img src="./src/imagens/cyberkakashi-icon.png"
+                    alt="Ícone Cyberkakashi"></button></li>
+        <li><button class="botao cybersakura"><img src="./src/imagens/cybersakura-icon.png"
+                    alt="Ícone Cybersakura"></button></li>
+        <li><button class="botao cyberhinata"><img src="./src/imagens/cyberhinata-icon.png"
+                    alt="Ícone Cyberhinata"></button></li>
+    </ul>
+
+    <!-- Link para o arquivo de script JavaScript -->
+    <script src="src/js/index.js"></script> <!-- Carrega o arquivo JavaScript que controlará a interação na página -->
+</body>
+
+</html>

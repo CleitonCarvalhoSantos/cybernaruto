@@ -1,0 +1,101 @@
+/* 
+    O @media define regras específicas para diferentes larguras de tela (responsividade).
+    No caso abaixo, as regras se aplicam quando a largura da tela é igual ou menor que 768px.
+*/
+@media (max-width: 768px) {
+    /* Modifica o gradiente de fundo da tela principal em telas pequenas */
+    main::after {
+        background: linear-gradient(0deg, #000 45%, rgba(0, 0, 0, 0.00) 70%) no-repeat;
+        /* altera o gradiente */
+        width: 100vw;
+        /* faz o gradiente ocupar toda a largura da tela */
+    }
+
+    /* Ajusta a altura das imagens de personagens para 85% da tela e centraliza */
+    main .personagem .imagem {
+        height: 85%;
+        object-position: center;
+        /* centraliza a imagem */
+    }
+
+    /* Ajusta a posição do conteúdo dentro do personagem (desloca mais para baixo e à esquerda) */
+    .conteudo {
+        justify-content: flex-end;
+        /* move o conteúdo para a parte inferior do bloco */
+        left: 0;
+        /* posiciona o conteúdo à esquerda */
+        top: -20%;
+        /* desloca o conteúdo para cima */
+        max-width: 100vw;
+        /* largura máxima igual à largura da tela */
+        padding: 30px;
+        /* adiciona espaçamento interno */
+    }
+
+    /* Diminui o tamanho da fonte do nome do personagem */
+    .conteudo .nome-personagem {
+        font-size: 30px;
+    }
+
+    /* Ajusta a largura máxima da descrição do personagem */
+    .conteudo .descricao {
+        max-width: 500px;
+    }
+
+    /* Muda o layout dos botões para uma linha horizontal, com alinhamento na parte inferior */
+    .botoes {
+        flex-direction: row;
+        /* coloca os botões em linha */
+        align-items: flex-end;
+        /* posiciona os botões na parte inferior */
+        width: 100%;
+        /* ocupa toda a largura da tela */
+        padding: 30px;
+        /* espaçamento interno */
+    }
+
+    /* Ajusta o tamanho dos botões */
+    .botoes .botao {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* Redimensiona as imagens dentro dos botões */
+    .botoes .botao img {
+        max-width: 70px;
+    }
+}
+
+/* 
+    @media abaixo define regras para telas com largura de até 425px.
+*/
+@media (max-width: 425px) {
+
+    /* Ajusta a altura da imagem do personagem para auto, permitindo que a imagem seja redimensionada proporcionalmente */
+    main .personagem .imagem {
+        height: auto;
+    }
+
+    /* Mantém o conteúdo do personagem deslocado para cima */
+    .conteudo {
+        top: -20%;
+    }
+
+    /* Ajusta os botões para que fiquem mais compactos */
+    .botoes {
+        padding: 20px;
+        top: -10%;
+        /* ajusta a posição vertical dos botões */
+    }
+
+    /* Diminui o tamanho dos botões */
+    .botoes .botao {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Ajusta a imagem dentro dos botões */
+    .botoes .botao img {
+        max-width: 50px;
+    }
+}
