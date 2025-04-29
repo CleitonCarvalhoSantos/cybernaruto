@@ -3,6 +3,9 @@ body {
   background-color: #000000;
   overflow: hidden;
 }
+image {
+  image-rendering: crisp-edges;
+}
 
 /* Cria um efeito visual com gradiente escuro na lateral esquerda da tela */
 main::after {
@@ -30,7 +33,7 @@ main .personagem.selecionado {
 main.personagem .imagem {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* faz a imagem preencher o espaço sem distorcer */
+  object-fit: contain; /* faz a imagem preencher o espaço sem distorcer */
 }
 
 

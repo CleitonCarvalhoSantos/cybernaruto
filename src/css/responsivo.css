@@ -13,7 +13,7 @@
 
     /* Ajusta a altura das imagens de personagens para 85% da tela e centraliza */
     main .personagem .imagem {
-        height: 85%;
+        height: auto;
         object-position: center;
         /* centraliza a imagem */
     }
