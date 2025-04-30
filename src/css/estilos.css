@@ -1,125 +1,233 @@
 /* define a cor de fundo da tela como preto e esconde qualquer conteúdo que ultrapasse o limite da tela */
 body {
   background-color: #000000;
+  /* fundo preto */
   overflow: hidden;
+  /* esconde qualquer conteúdo que ultrapasse o limite da tela */
 }
 
 /* Cria um efeito visual com gradiente escuro na lateral esquerda da tela */
 main::after {
-  content: ''; /* conteúdo vazio: necessário para pseudo-elementos */
-  position: fixed; /* fixa o gradiente na tela */
+  content: '';
+  /* conteúdo vazio: necessário para pseudo-elementos */
+  position: fixed;
+  /* fixa o gradiente na tela */
   top: 0;
+  /* posiciona o gradiente na parte superior */
   left: 0;
-  min-height: 100vh; /* cobre 100% da altura da tela */
-  width: 100vh; /* largura igual à altura da tela */
-  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* gradiente preto que desaparece */
+  /* posiciona o gradiente na lateral esquerda */
+  min-height: 100vh;
+  /* cobre 100% da altura da tela */
+  width: 100vh;
+  /* largura igual à altura da tela */
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat;
+  /* gradiente preto que desaparece */
 }
 
 /* Esconde todos os personagens por padrão */
 main .personagem {
   display: none;
-  height: 100vh; /* ocupa a tela inteira verticalmente */
+  /* esconde os personagens */
+  height: 100vh;
+  /* ocupa a tela inteira verticalmente */
 }
 
 /* Exibe o personagem selecionado */
 main .personagem.selecionado {
   display: block;
+  /* mostra o personagem selecionado */
 }
 
 /* Ajusta a imagem do personagem para cobrir toda a tela */
 main .personagem .imagem {
   width: 100%;
+  /* ocupa toda a largura da tela */
   height: 100%;
-  object-fit: cover; /*faz a imagem preencher o espaço sem distorcer */
+  /* ocupa toda a altura da tela */
+  object-fit: cover;
+  /*faz a imagem preencher o espaço sem distorcer */
 }
 
 /* Estiliza o bloco de texto sobre o personagem */
 .conteudo {
-  position: absolute; /* posicionamento livre na tela */
+  position: absolute;
+  /* posicionamento livre na tela */
   top: 0;
-  left: 120px; /* distância da esquerda */
+  /* distância do topo */
+  left: 120px;
+  /* distância da esquerda */
   display: flex;
+  /* usa flexbox */
   flex-direction: column;
-  justify-content: center; /* centraliza verticalmente o conteúdo */
+  /* coloca o conteúdo em coluna */
+  align-items: flex-start;
+  /* alinha horizontalmente o conteúdo */
+  justify-content: center;
+  /* centraliza verticalmente o conteúdo */
   height: 100%;
-  max-width: 380px; /* largura máxima do bloco */
-  z-index: 1; /* garante que o texto fique acima da imagem */
+  /* ocupa toda a altura da tela */
+  max-width: 380px;
+  /* largura máxima do bloco */
+  z-index: 1;
+  /* garante que o texto fique acima da imagem */
 }
 
 /* Estiliza o nome do personagem */
 .nome-personagem {
-  font-size: 48px; /* tamanho da fonte */
-    font-family: "secular one"; /* fonte importada */
-    font-weight: 400; /* peso da fonte */
-    margin-bottom: 20px; /* espaçamento inferior */
+  font-size: 48px;
+  /* tamanho da fonte */
+  font-family: "secular one";
+  /* fonte importada */
+  font-weight: 400;
+  /* peso da fonte */
+  margin-bottom: 0px;
+  /* espaçamento inferior */
 }
 
-.nome-personagem.cybermundo { color: #47FFC5; }
-.nome-personagem.cybernaruto { color: #ffa94f; }
-.nome-personagem.cybersasuke { color: #9747ff; }
-.nome-personagem.cyberkakashi { color: #ffffff; }
-.nome-personagem.cybersakura { color: #e4309a; }
-.nome-personagem.cyberhinata { color: royalblue; }
+/* Define cores personalizadas para cada personagem */
+.nome-personagem.cybermundo {
+  color: #47FFC5;
+}
+
+.nome-personagem.cybernaruto {
+  color: #ffa94f;
+}
+
+.nome-personagem.cybersasuke {
+  color: #9747ff;
+}
+
+.nome-personagem.cyberkakashi {
+  color: #ffffff;
+}
+
+.nome-personagem.cybersakura {
+  color: #e4309a;
+}
+
+.nome-personagem.cyberhinata {
+  color: royalblue;
+}
 
 /* Estiliza a descrição do personagem */
 .conteudo .descricao {
-  color: #ffffff; /* cor branca */
-  font-family: "rubik"; /* fonte importada */
-  font-size: 16px; /* tamanho da fonte */
-  line-height: 24px; /* altura da linha */
+  color: #ffffff;
+  /* cor branca */
+  font-family: "rubik";
+  /* fonte importada */
+  font-size: 15px;
+  /* tamanho da fonte */
+  line-height: 24px;
+  /* altura da linha */
 }
 
 /* Botões desktop (barra lateral) */
 .botoes {
-  background-color: rgba(0, 0, 0, 0.3); /* fundo preto semi-transparente */
-    position: fixed; /* fixa na tela */
-    top: 0; /* posiciona na parte superior */
-    right: 0; /* posiciona na lateral direita */
-    width: 180px; /* largura */
-    display: flex; /* usa flexbox */
-    flex-direction: column; /* coloca os botões em coluna */
-    align-items: center;  /* centraliza horizontalmente */
-    justify-content: center;  /* centraliza verticalmente */
-    min-height: 100vh;  /* ocupa toda a altura da tela */
-    gap: 16px; /* espaço entre os botões */
+  background-color: rgba(0, 0, 0, 0.3);
+  /* fundo preto semi-transparente */
+  position: fixed;
+  /* fixa na tela */
+  top: 0;
+  /* posiciona na parte superior */
+  right: 0;
+  /* posiciona na lateral direita */
+  width: 180px;
+  /* largura */
+  display: flex;
+  /* usa flexbox */
+  flex-direction: column;
+  /* coloca os botões em coluna */
+  align-items: center;
+  /* centraliza horizontalmente */
+  justify-content: center;
+  /* centraliza verticalmente */
+  min-height: 100vh;
+  /* ocupa toda a altura da tela */
+  gap: 16px;
+  /* espaço entre os botões */
 }
 
 /* Estiliza os botões */
 .botao {
-  border: none; /* sem borda */
-  background-color: transparent;  /* sem fundo */
-  width: 90px;  /* largura */  
-  height: 90px;  /* altura */
-  cursor: pointer;  /* cursor de ponteiro */
-  transition: transform 0.3s ease;  /* transição suave */
-  display: flex;  /* usa flexbox */    
-  align-items: center;  /* centraliza horizontalmente */
-  justify-content: center;  /* centraliza verticalmente */
-  border-radius: 50px;  /* borda arredondada */
-  overflow: hidden;  /* esconde conteúdo fora da borda */
+  border: none;
+  /* sem borda */
+  border-radius: 50%;
+  /* borda arredondada */
+  background-color: transparent;
+  /* sem fundo */
+  width: 90px;
+  /* largura */
+  height: 90px;
+  /* altura */
+  cursor: pointer;
+  /* cursor de ponteiro */
+  transition: transform 0.3s ease;
+  /* transição suave */
+  display: flex;
+  /* usa flexbox */
+  align-items: center;
+  /* centraliza horizontalmente */
+  justify-content: center;
+  /* centraliza verticalmente */
+  overflow: hidden;
+  /* esconde conteúdo fora da borda */
 }
 
 /* Estiliza as imagens dos botões */
 .botao img {
-  width: 100%;  /* ocupa toda a largura */
-  height: 100%;  /* ocupa toda a altura */
-  object-fit: contain;  /* preserva a proporção da imagem */
-  display: block;   /* usa display block */
-  background: transparent;  /* sem fundo */
-  pointer-events: none;  /* desativa os eventos do mouse */
-  image-rendering: auto;  /* melhor qualidade da imagem */
+  width: 100%;
+  /* ocupa toda a largura */
+  height: 100%;
+  /* ocupa toda a altura */
+  object-fit: contain;
+  /* preserva a proporção da imagem */
+  display: block;
+  /* usa display block */
+  background: transparent;
+  /* sem fundo */
+  pointer-events: none;
+  /* desativa os eventos do mouse */
+  image-rendering: auto;
+  /* melhor qualidade da imagem */
 }
 
 /* Estiliza os botões quando eles estiverem selecionados */
 .botao.selecionado {
-  transform: scale(1.2);  /* aumenta o tamanho */
-  box-shadow: 0 0 10px #fff; /* sombra */
+  transform: scale(1.2);
+  /* aumenta o tamanho */
+  background-color: transparent;
+  /* fundo */
+  box-shadow: 0 0 10px #fff;
+  /* sombra branca */
 }
 
 /* Estiliza as imagens dos botões quando eles estiverem selecionados */
-.botao.cybermundo.selecionado img { filter: drop-shadow(0 0 10px #47FFC5); }
-.botao.cybernaruto.selecionado img { filter: drop-shadow(0 0 10px #ffa94f); }
-.botao.cybersasuke.selecionado img { filter: drop-shadow(0 0 10px #9747ff); }
-.botao.cyberkakashi.selecionado img { filter: drop-shadow(0 0 10px #fff); }
-.botao.cybersakura.selecionado img { filter: drop-shadow(0 0 10px #e4309a); }
-.botao.cyberhinata.selecionado img { filter: drop-shadow(0 0 10px royalblue); }
+.botao.cybermundo.selecionado {
+  box-shadow: 0 0 10px #47FFC5;
+  background-color: #47FFC5
+}
+
+.botao.cybernaruto.selecionado {
+  box-shadow: 0 0 10px #ffa94f;
+  background-color: #ffa94f;
+}
+
+.botao.cybersasuke.selecionado {
+  box-shadow: 0 0 10px #9747ff;
+  background-color: #9747ff;
+}
+
+.botao.cyberkakashi.selecionado {
+  box-shadow: 0 0 10px #fff;
+  background-color: #fff;
+}
+
+.botao.cybersakura.selecionado {
+  box-shadow: 0 0 10px #e4309a;
+  background-color: #e4309a;
+}
+
+.botao.cyberhinata.selecionado {
+  box-shadow: 0 0 10px royalblue;
+  background-color: royalblue;
+}
