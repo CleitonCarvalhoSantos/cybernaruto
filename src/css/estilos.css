@@ -1,62 +1,57 @@
-/* Regras universais básicas */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
+/* define a cor de fundo da tela como preto e esconde qualquer conteúdo que ultrapasse o limite da tela */
 body {
   background-color: #000000;
   overflow: hidden;
 }
 
-img {
-  image-rendering: crisp-edges;
-}
-
+/* Cria um efeito visual com gradiente escuro na lateral esquerda da tela */
 main::after {
-  content: '';
-  position: fixed;
+  content: ''; /* conteúdo vazio: necessário para pseudo-elementos */
+  position: fixed; /* fixa o gradiente na tela */
   top: 0;
   left: 0;
-  min-height: 100vh;
-  width: 100vw; /* CORRIGIDO: 100vh causava overflow lateral */
-  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat;
+  min-height: 100vh; /* cobre 100% da altura da tela */
+  width: 100vh; /* largura igual à altura da tela */
+  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat; /* gradiente preto que desaparece */
 }
 
+/* Esconde todos os personagens por padrão */
 main .personagem {
   display: none;
-  height: 100vh;
+  height: 100vh; /* ocupa a tela inteira verticalmente */
 }
 
+/* Exibe o personagem selecionado */
 main .personagem.selecionado {
   display: block;
 }
 
+/* Ajusta a imagem do personagem para cobrir toda a tela */
 main .personagem .imagem {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /*faz a imagem preencher o espaço sem distorcer */
 }
 
+/* Estiliza o bloco de texto sobre o personagem */
 .conteudo {
   position: absolute; /* posicionamento livre na tela */
-    top: 0;
-    left: 120px; /* distância da esquerda */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centraliza verticalmente o conteúdo */
-    height: 100%;
-    max-width: 380px; /* largura máxima do bloco */
-    z-index: 1; /* garante que o texto fique acima da imagem */
+  top: 0;
+  left: 120px; /* distância da esquerda */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centraliza verticalmente o conteúdo */
+  height: 100%;
+  max-width: 380px; /* largura máxima do bloco */
+  z-index: 1; /* garante que o texto fique acima da imagem */
 }
 
+/* Estiliza o nome do personagem */
 .nome-personagem {
-  font-size: 48px;
-  font-family: "secular one";
-  font-weight: 400;
-  margin-bottom: 20px;
-  text-shadow: 0 0 8px #fff;
+  font-size: 48px; /* tamanho da fonte */
+    font-family: "secular one"; /* fonte importada */
+    font-weight: 400; /* peso da fonte */
+    margin-bottom: 20px; /* espaçamento inferior */
 }
 
 .nome-personagem.cybermundo { color: #47FFC5; }
@@ -66,59 +61,62 @@ main .personagem .imagem {
 .nome-personagem.cybersakura { color: #e4309a; }
 .nome-personagem.cyberhinata { color: royalblue; }
 
+/* Estiliza a descrição do personagem */
 .conteudo .descricao {
-  color: #ffffff;
-  font-family: "rubik";
-  font-size: 16px;
-  line-height: 24px;
+  color: #ffffff; /* cor branca */
+  font-family: "rubik"; /* fonte importada */
+  font-size: 16px; /* tamanho da fonte */
+  line-height: 24px; /* altura da linha */
 }
 
 /* Botões desktop (barra lateral) */
 .botoes {
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 140px;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(4px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 20px 0;
-  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.3); /* fundo preto semi-transparente */
+    position: fixed; /* fixa na tela */
+    top: 0; /* posiciona na parte superior */
+    right: 0; /* posiciona na lateral direita */
+    width: 180px; /* largura */
+    display: flex; /* usa flexbox */
+    flex-direction: column; /* coloca os botões em coluna */
+    align-items: center;  /* centraliza horizontalmente */
+    justify-content: center;  /* centraliza verticalmente */
+    min-height: 100vh;  /* ocupa toda a altura da tela */
+    gap: 16px; /* espaço entre os botões */
 }
 
+/* Estiliza os botões */
 .botao {
-  border: none;
-  background-color: transparent;
-  width: 64px;
-  height: 64px;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 12px;
-  overflow: hidden;
+  border: none; /* sem borda */
+  background-color: transparent;  /* sem fundo */
+  width: 90px;  /* largura */  
+  height: 90px;  /* altura */
+  cursor: pointer;  /* cursor de ponteiro */
+  transition: transform 0.3s ease;  /* transição suave */
+  display: flex;  /* usa flexbox */    
+  align-items: center;  /* centraliza horizontalmente */
+  justify-content: center;  /* centraliza verticalmente */
+  border-radius: 50px;  /* borda arredondada */
+  overflow: hidden;  /* esconde conteúdo fora da borda */
 }
 
+/* Estiliza as imagens dos botões */
 .botao img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  display: block;
-  background: transparent;
-  pointer-events: none;
-  image-rendering: auto;
+  width: 100%;  /* ocupa toda a largura */
+  height: 100%;  /* ocupa toda a altura */
+  object-fit: contain;  /* preserva a proporção da imagem */
+  display: block;   /* usa display block */
+  background: transparent;  /* sem fundo */
+  pointer-events: none;  /* desativa os eventos do mouse */
+  image-rendering: auto;  /* melhor qualidade da imagem */
 }
 
+/* Estiliza os botões quando eles estiverem selecionados */
 .botao.selecionado {
-  transform: scale(1.1);
+  transform: scale(1.2);  /* aumenta o tamanho */
+  box-shadow: 0 0 10px #fff; /* sombra */
 }
 
+/* Estiliza as imagens dos botões quando eles estiverem selecionados */
 .botao.cybermundo.selecionado img { filter: drop-shadow(0 0 10px #47FFC5); }
 .botao.cybernaruto.selecionado img { filter: drop-shadow(0 0 10px #ffa94f); }
 .botao.cybersasuke.selecionado img { filter: drop-shadow(0 0 10px #9747ff); }
