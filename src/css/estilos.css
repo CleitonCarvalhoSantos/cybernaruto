@@ -52,9 +52,9 @@ main .personagem .imagem {
 .conteudo {
   position: absolute;
   /* posicionamento livre na tela */
-  top: 0;
+  top: -35%;
   /* distância do topo */
-  left: 120px;
+  left: 100px;
   /* distância da esquerda */
   display: flex;
   /* usa flexbox */
@@ -66,7 +66,7 @@ main .personagem .imagem {
   /* centraliza verticalmente o conteúdo */
   height: 100%;
   /* ocupa toda a altura da tela */
-  max-width: 380px;
+  max-width: 400px;
   /* largura máxima do bloco */
   z-index: 1;
   /* garante que o texto fique acima da imagem */
@@ -74,7 +74,7 @@ main .personagem .imagem {
 
 /* Estiliza o nome do personagem */
 .nome-personagem {
-  font-size: 48px;
+  font-size: 50px;
   /* tamanho da fonte */
   font-family: "secular one";
   /* fonte importada */
@@ -115,7 +115,7 @@ main .personagem .imagem {
   /* cor branca */
   font-family: "rubik";
   /* fonte importada */
-  font-size: 15px;
+  font-size: 20px;
   /* tamanho da fonte */
   line-height: 24px;
   /* altura da linha */
@@ -123,7 +123,7 @@ main .personagem .imagem {
 
 /* Botões desktop (barra lateral) */
 .botoes {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(4, 4, 4, 0.689);
   /* fundo preto semi-transparente */
   position: fixed;
   /* fixa na tela */
@@ -162,72 +162,48 @@ main .personagem .imagem {
   cursor: pointer;
   /* cursor de ponteiro */
   transition: transform 0.3s ease;
-  /* transição suave */
-  display: flex;
-  /* usa flexbox */
-  align-items: center;
-  /* centraliza horizontalmente */
-  justify-content: center;
-  /* centraliza verticalmente */
-  overflow: hidden;
-  /* esconde conteúdo fora da borda */
 }
 
 /* Estiliza as imagens dos botões */
-.botao img {
-  width: 100%;
-  /* ocupa toda a largura */
-  height: 100%;
-  /* ocupa toda a altura */
-  object-fit: contain;
-  /* preserva a proporção da imagem */
-  display: block;
-  /* usa display block */
-  background: transparent;
-  /* sem fundo */
-  pointer-events: none;
-  /* desativa os eventos do mouse */
-  image-rendering: auto;
-  /* melhor qualidade da imagem */
+.botoes .botao img {
+  border-radius: 50%;;
 }
 
 /* Estiliza os botões quando eles estiverem selecionados */
 .botao.selecionado {
   transform: scale(1.2);
-  /* aumenta o tamanho */
-  background-color: transparent;
-  /* fundo */
+  /* aumenta o tamanho */;
   box-shadow: 0 0 10px #fff;
   /* sombra branca */
 }
 
 /* Estiliza as imagens dos botões quando eles estiverem selecionados */
-.botao.cybermundo.selecionado {
+.botoes .botao.cybermundo.selecionado {
   box-shadow: 0 0 10px #47FFC5;
   background-color: #47FFC5
 }
 
-.botao.cybernaruto.selecionado {
+.botoes .botao.cybernaruto.selecionado {
   box-shadow: 0 0 10px #ffa94f;
   background-color: #ffa94f;
 }
 
-.botao.cybersasuke.selecionado {
+.botoes .botao.cybersasuke.selecionado {
   box-shadow: 0 0 10px #9747ff;
   background-color: #9747ff;
 }
 
-.botao.cyberkakashi.selecionado {
+.botoes.botao.cyberkakashi.selecionado {
   box-shadow: 0 0 10px #fff;
   background-color: #fff;
 }
 
-.botao.cybersakura.selecionado {
+.botoes .botao.cybersakura.selecionado {
   box-shadow: 0 0 10px #e4309a;
   background-color: #e4309a;
 }
 
-.botao.cyberhinata.selecionado {
+.botoes .botao.cyberhinata.selecionado {
   box-shadow: 0 0 10px royalblue;
   background-color: royalblue;
 }
