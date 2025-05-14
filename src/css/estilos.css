@@ -98,7 +98,7 @@ main .personagem .imagem {
 }
 
 .nome-personagem.cyberkakashi {
-  color: #ffffff;
+  color: #0059ff;
 }
 
 .nome-personagem.cybersakura {
@@ -173,7 +173,7 @@ main .personagem .imagem {
 .botao.selecionado {
   transform: scale(1.2);
   /* aumenta o tamanho */;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px #ffffff;
   /* sombra branca */
 }
 
@@ -194,8 +194,8 @@ main .personagem .imagem {
 }
 
 .botoes.botao.cyberkakashi.selecionado {
-  box-shadow: 0 0 10px #fff;
-  background-color: #fff;
+  box-shadow: 0 0 10px #0059ff;
+  background-color:#0059ff;
 }
 
 .botoes .botao.cybersakura.selecionado {

@@ -79,13 +79,13 @@
 /* 
   @media abaixo define regras para telas com largura de até 425px.
 */
-@media (max-width: 425px) {
+@media (max-width: 429px) {
 
     /* Ajusta a altura da imagem do personagem para auto, permitindo que a imagem seja redimensionada proporcionalmente */
     main .personagem .imagem {
         height: 47vh;
         /* altura automática */
-        width: auto;
+        width: 50vw;
         /* largura igual à largura da tela */
         position: static;
         /* posicionamento padrão */
@@ -93,12 +93,12 @@
 
     /* Mantém o conteúdo do personagem deslocado para cima */
     .conteudo {
-    max-width: 220px; /* Reduz a largura máxima */
+    max-width: 250px; /* Reduz a largura máxima */
     padding: 1px; /* Reduz o espaçamento interno */
     font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1; /* Ajusta o espaçamento entre linhas */
     left: 1px; /* Ajusta a posição horizontal */
-    top: -22%;
+    top: -17%;
         /* desloca o conteúdo para cima */
     }
 
@@ -113,15 +113,15 @@
 
     /* Diminui o tamanho dos botões */
     .botoes .botao {
-        width: 40px;
+        width: 50px;
         /* largura */
-        height: 40px;
+        height: 50px;
         /* altura */
     }
 
     /* Ajusta a imagem dentro dos botões */
     .botoes .botao img {
-        max-width: 40px;
+        max-width: 50px;
         /* largura máxima */
     }
 }
