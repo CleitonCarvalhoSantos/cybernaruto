@@ -83,7 +83,7 @@
 
     /* Ajusta a altura da imagem do personagem para auto, permitindo que a imagem seja redimensionada proporcionalmente */
     main .personagem .imagem {
-        height: 60vh;
+        height: 47vh;
         /* altura automática */
         width: auto;
         /* largura igual à largura da tela */
@@ -93,35 +93,35 @@
 
     /* Mantém o conteúdo do personagem deslocado para cima */
     .conteudo {
-    max-width: 300px; /* Reduz a largura máxima */
+    max-width: 220px; /* Reduz a largura máxima */
     padding: 1px; /* Reduz o espaçamento interno */
     font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1; /* Ajusta o espaçamento entre linhas */
     left: 1px; /* Ajusta a posição horizontal */
-    top: -17%;
+    top: -22%;
         /* desloca o conteúdo para cima */
     }
 
     /* Ajusta os botões para que fiquem mais compactos */
     .botoes {
-        padding: 1px; /* Reduz o espaçamento interno */
-        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 11%); 
-        /* gradiente preto que desaparece */
-        top: -14%; 
-        /* desloca os botões para cima */
-     }
+        top: -18%;
+        right: 0;
+        flex-direction: column ;
+        background: linear-gradient(to left, #fcf9f9, rgba(0, 0, 0, 0) 33%);
+        min-height: 100vh; /* ocupa toda a altura da tela */
+        }
 
     /* Diminui o tamanho dos botões */
     .botoes .botao {
-        width: 50px;
+        width: 40px;
         /* largura */
-        height: 50px;
+        height: 40px;
         /* altura */
     }
 
     /* Ajusta a imagem dentro dos botões */
     .botoes .botao img {
-        max-width: 50px;
+        max-width: 40px;
         /* largura máxima */
     }
 }
