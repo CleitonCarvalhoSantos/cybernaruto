@@ -79,13 +79,13 @@
 /* 
   @media abaixo define regras para telas com largura de até 425px.
 */
-@media (max-width: 429px) {
+@media (max-width: 430px) {
 
     /* Ajusta a altura da imagem do personagem para auto, permitindo que a imagem seja redimensionada proporcionalmente */
     main .personagem .imagem {
-        height: 47vh;
+        height: 60vh;
         /* altura automática */
-        width: 50vw;
+        width: auto;
         /* largura igual à largura da tela */
         position: static;
         /* posicionamento padrão */
@@ -98,7 +98,7 @@
     font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1; /* Ajusta o espaçamento entre linhas */
     left: 1px; /* Ajusta a posição horizontal */
-    top: -17%;
+    top: -9%;
         /* desloca o conteúdo para cima */
     }
 
