@@ -6,16 +6,16 @@
 
     /* Modifica o gradiente de fundo da tela principal em telas pequenas */
     main::after {
-        background: linear-gradient(0deg, #000 25%, rgba(0, 0, 0, 0.00) 70%) no-repeat;
-        /* gradiente preto que desaparece */
-        width: 100vw;
+        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0));
+        /* gradiente branco que desaparece */
+        width: auto;
         /* faz o gradiente ocupar toda a largura da tela */
     }
-
-    /* Ajusta a altura das imagens de personagens para 85% da tela e centraliza */
+        
+    /* Exibe o personagem selecionado */
     main .personagem .imagem {
-        height: 85vh;
-        /* altura da tela */
+        height: 70vh;
+        /* altura da /tela */
         width: auto;
         /* largura automática */
         position: static;
@@ -28,7 +28,7 @@
         /* move o conteúdo para a parte inferior do bloco */
         left: 0;
         /* posiciona o conteúdo à esquerda */
-        top: -80px;
+        top: -150px;
         /* desloca o conteúdo para cima */
         max-width: 100vw;
         /* largura máxima igual à largura da tela */
@@ -50,6 +50,10 @@
 
     /* Muda o layout dos botões para uma linha horizontal, com alinhamento na parte inferior */
     .botoes {
+        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 15%);
+        /* gradiente preto que desaparece */
+        width: 100vw;
+        /* faz o gradiente ocupar toda a largura da tela */
         flex-direction: row;
         /* coloca os botões em linha */
         align-items: flex-end;
@@ -79,9 +83,9 @@
 
     /* Ajusta a altura da imagem do personagem para auto, permitindo que a imagem seja redimensionada proporcionalmente */
     main .personagem .imagem {
-        height: auto;
+        height: 60vh;
         /* altura automática */
-        width: 100vw;
+        width: auto;
         /* largura igual à largura da tela */
         position: static;
         /* posicionamento padrão */
@@ -95,6 +99,7 @@
 
     /* Ajusta os botões para que fiquem mais compactos */
     .botoes {
+        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 11%);
         padding: 20px;
         /* espaçamento interno */
         top: -10%;

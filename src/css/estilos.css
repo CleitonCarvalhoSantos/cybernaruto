@@ -20,7 +20,7 @@ main::after {
   /* cobre 100% da altura da tela */
   width: 100vh;
   /* largura igual à altura da tela */
-  background: linear-gradient(92deg, #000 25%, rgba(0, 0, 0, 0) 75%) no-repeat;
+  background: linear-gradient(92deg, #000 10%, rgba(0, 0, 0, 0) 75%) no-repeat;
   /* gradiente preto que desaparece */
 }
 
@@ -123,7 +123,7 @@ main .personagem .imagem {
 
 /* Botões desktop (barra lateral) */
 .botoes {
-  background-color: rgba(4, 4, 4, 0.689);
+  background-color: rgba(4, 4, 4, 0.589);
   /* fundo preto semi-transparente */
   position: fixed;
   /* fixa na tela */
