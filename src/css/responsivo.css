@@ -93,21 +93,21 @@
 
     /* Mantém o conteúdo do personagem deslocado para cima */
     .conteudo {
-    max-width: 500px; /* Reduz a largura máxima */
+    max-width: 300px; /* Reduz a largura máxima */
     padding: 1px; /* Reduz o espaçamento interno */
-    font-size: 1%; /* Diminui o tamanho da fonte */
+    font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1; /* Ajusta o espaçamento entre linhas */
     left: 1px; /* Ajusta a posição horizontal */
-    top: -21%;
+    top: -17%;
         /* desloca o conteúdo para cima */
     }
 
     /* Ajusta os botões para que fiquem mais compactos */
     .botoes {
         padding: 1px; /* Reduz o espaçamento interno */
-        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 10%); 
+        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 11%); 
         /* gradiente preto que desaparece */
-        top: -12%; 
+        top: -14%; 
         /* desloca os botões para cima */
      }
 
