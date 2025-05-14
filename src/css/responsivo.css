@@ -110,17 +110,16 @@
 
     /* Ajusta os botões para que fiquem mais compactos */
     .botoes {
-        top: -18%;
+        top: -15%;
         /* ajusta a posição dos botões de baixo para cima */
-        right: 0;
-        /* ajusta a posição dos botões a direita da tela */
         flex-direction: column;
         /* coloca os botões em coluna */
         background: linear-gradient(to left, #fcf9f9fa, rgba(0, 0, 0, 0) 40%);
         /* gradiente branco que desaparece */
+        height: 100vh; /* ajusta o gradiente para ocupar toda a altura da tela */
     }
 
-    /* Diminui o tamanho dos botões */
+    /* Define o tamanho dos botões */
     .botoes .botao {
         width: 50px;
         /* largura */
