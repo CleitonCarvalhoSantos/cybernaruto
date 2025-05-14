@@ -98,7 +98,7 @@
     font-size: 1px; /* Diminui o tamanho da fonte */
     line-height: 1; /* Ajusta o espaçamento entre linhas */
     left: 1px; /* Ajusta a posição horizontal */
-    top: -9%;
+    top: -4%;
         /* desloca o conteúdo para cima */
     }
 
@@ -107,9 +107,10 @@
         top: -18%;
         right: 0;
         flex-direction: column ;
-        background: linear-gradient(to left, #fcf9f9, rgba(0, 0, 0, 0) 33%);
-        min-height: 100vh; /* ocupa toda a altura da tela */
-        }
+        background: linear-gradient(to left, #fcf9f9fa, rgba(0, 0, 0, 0) 40%);
+        background-repeat: no-repeat;
+        background-size: 100% 88%; /* gradiente branco que desaparece */               
+    }
 
     /* Diminui o tamanho dos botões */
     .botoes .botao {
