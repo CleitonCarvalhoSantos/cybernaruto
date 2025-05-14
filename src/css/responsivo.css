@@ -28,7 +28,7 @@
         /* move o conteúdo para a parte inferior do bloco */
         left: 0;
         /* posiciona o conteúdo à esquerda */
-        top: -150px;
+        top:-110px;
         /* desloca o conteúdo para cima */
         max-width: 100vw;
         /* largura máxima igual à largura da tela */
@@ -43,7 +43,7 @@
 
     /* Ajusta a largura máxima da descrição do personagem */
     .conteudo .descricao {
-        font-size: 15px;
+        font-size: 13px; /* tamanho da fonte */
         max-width: 500px;
         /* largura máxima */
     }
@@ -93,16 +93,22 @@
 
     /* Mantém o conteúdo do personagem deslocado para cima */
     .conteudo {
-        top: -18%;
+        max-width: 500px; /* Reduz a largura máxima */
+    padding: 10px; /* Reduz o espaçamento interno */
+    font-size: 16%; /* Diminui o tamanho da fonte */
+    line-height: 1; /* Ajusta o espaçamento entre linhas */
+    top: -50px; /* Ajusta a posição vertical */
+    left: 10px; /* Ajusta a posição horizontal */
+        top: -15%;
         /* desloca o conteúdo para cima */
     }
 
     /* Ajusta os botões para que fiquem mais compactos */
     .botoes {
-        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 11%);
+        background: linear-gradient(to top, #fcf9f9, rgba(0, 0, 0, 0) 13%);
         padding: 20px;
         /* espaçamento interno */
-        top: -10%;
+        top: -4%;
         /* ajusta a posição vertical dos botões */
     }
 
